@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
        - name: webapp1-clusterip-pod
-        image: katacoda/docker-http-server:latest
-        ports:
-         - containerPort: 80
+         image: katacoda/docker-http-server:latest
+         ports:
+          - containerPort: 80
