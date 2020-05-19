@@ -1,16 +1,19 @@
+--- 
 apiVersion: extensions/v1beta1
 kind: Deployment
-metadata:
+metadata: 
   name: webapp1-clusterip-deployment
-spec:
+spec: 
   replicas: 2
-  template:
-    metadata:
-      labels:
+  template: 
+    metadata: 
+      labels: 
         app: webapp1-clusterip
-    spec:
-      containers:
-       - name: webapp1-clusterip-pod
-         image: katacoda/docker-http-server:latest
-         ports:
-          - containerPort:  80
+    spec: 
+      containers: 
+        - 
+          image: "katacoda/docker-http-server:latest"
+          name: webapp1-clusterip-pod
+          ports: 
+            - 
+              containerPort: 80
