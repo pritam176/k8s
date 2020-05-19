@@ -1,0 +1,20 @@
+cat <<EOF | kubectl apply -f -
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata: 
+  name: webapp1-clusterip-deployment
+spec: 
+  replicas: 2
+  template: 
+    metadata: 
+      labels: 
+        app: webapp1-clusterip
+    spec: 
+      containers: 
+        - 
+          image: "katacoda/docker-http-server:latest"
+          name: webapp1-clusterip-pod
+          ports: 
+            - 
+              containerPort: 80
+EOF
